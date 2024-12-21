@@ -57,12 +57,12 @@ h1 {
   color: var(--color-primary-dark);
   margin-bottom: 1.5rem;
   font-weight: 600;
-}
 
-h1 span {
-  color: var(--color-primary);
-  font-weight: 300;
-  display: block;
+  span {
+    color: var(--color-primary);
+    font-weight: 300;
+    display: block;
+  }
 }
 
 p {
@@ -92,11 +92,11 @@ input {
   font-size: 0.875rem;
   color: var(--color-primary-dark);
   font-family: var(--font-family);
-}
 
-input::placeholder {
-  color: var(--color-primary);
-  opacity: 0.5;
+  &::placeholder {
+    color: var(--color-primary);
+    opacity: 0.5;
+  }
 }
 
 button {
@@ -110,12 +110,12 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(206, 151, 151, 0.4);
-}
 
-button:hover {
-  background: linear-gradient(135deg, #fccfcf, #f19d9d);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px rgba(206, 151, 151, 0.5);
+  &:hover {
+    background: linear-gradient(135deg, #fccfcf, #f19d9d);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(206, 151, 151, 0.5);
+  }
 }
 
 .error-message {
@@ -137,35 +137,35 @@ button:hover {
   .container {
     grid-template-columns: 1.2fr 0.8fr;
   }
-  
+
   .content {
     padding: 4rem 0;
   }
-  
+
   .logo {
     width: 120px;
     margin: 0 8rem 4rem;
   }
-  
+
   .hero-content {
     max-width: none;
     padding: 0 8rem;
     text-align: left;
   }
-  
+
   h1 {
     font-size: 4rem;
     letter-spacing: 1rem;
   }
-  
+
   p {
     font-size: 1rem;
   }
-  
+
   .mobile-hero {
     display: none;
   }
-  
+
   .hero-image {
     display: block;
   }
@@ -175,21 +175,21 @@ button:hover {
   .content {
     text-align: center;
   }
-  
+
   .mobile-hero {
     display: block;
   }
-  
+
   .hero-content {
     padding: 0 2rem;
   }
-  
+
   h1 {
     font-size: 2.5rem;
     letter-spacing: 0.625rem;
     margin-bottom: 1.5rem;
   }
-  
+
   button {
     padding: 0 1.75rem;
   }
