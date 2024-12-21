@@ -27,10 +27,11 @@
             Add your email below to stay up-to-date with announcements and our launch deals.
           </p>
           
-          <form class="email-form">
+          <form class="email-form" id="emailForm">
             <div class="input-wrapper">
               <input 
                 type="email" 
+                id="emailInput"
                 placeholder="Email Address" 
                 required
               />
@@ -40,12 +41,38 @@
                 </svg>
               </button>
             </div>
-            <span class="error-message">Please provide a valid email</span>
+            <span class="error-message" id="errorMessage">Please provide a valid email</span>
           </form>
         </div>
       </div>
       
       <div class="hero-image"></div>
     </main>
+    
+    <script>
+      const form = document.getElementById('emailForm');
+      const emailInput = document.getElementById('emailInput');
+      const errorMessage = document.getElementById('errorMessage');
+
+      form.addEventListener('submit', function (event) {
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailValue) {
+          // If the input field is empty
+          errorMessage.textContent = "Email field cannot be empty";
+          errorMessage.style.display = 'block';
+          event.preventDefault();
+        } else if (!emailRegex.test(emailValue)) {
+          // If the email is not formatted correctly
+          errorMessage.textContent = "Please provide a valid email";
+          errorMessage.style.display = 'block';
+          event.preventDefault();
+        } else {
+          // If the input is valid
+          errorMessage.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
